@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Genrefy</string>
+    <string name="textSmall">12</string>
+    <string name="textLarge">24</string>
+</resources>

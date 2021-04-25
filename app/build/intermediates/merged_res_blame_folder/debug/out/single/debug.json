@@ -1,0 +1,302 @@
+[
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_play_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_play_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_library_music_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_library_music_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_baseline_settings_black_18dp.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-anydpi\\baseline_settings_black_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_play_circle.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-mdpi\\ic_play_circle.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_color_lens_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_color_lens_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_baseline_settings_white_18dp.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-anydpi\\baseline_settings_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-xhdpi\\ic_play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_player.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\activity_player.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_genre_list.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\activity_genre_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_music_note.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_music_note.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xhdpi\\ic_play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_play.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_play.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_play_circle.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-hdpi\\ic_play_circle.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_play_circle.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-xhdpi\\ic_play_circle.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_play_foreground.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_play_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_queue_music_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_queue_music_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_favorite_24_green.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_24_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_play_round.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_play_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_skip_previous_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_skip_previous_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\xml_preferences.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\xml\\preferences.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_play_circle.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-anydpi\\ic_play_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_play.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_play.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_library.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\activity_library.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_autoplay.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_autoplay.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-hdpi\\ic_play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_format_size_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_format_size_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_skip_next_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_skip_next_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pause.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\pause.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_settings_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_settings_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_up.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_short_text_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_short_text_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-mdpi\\ic_play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_play_circle_filled_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_play_circle_filled_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_spotify_auth.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\activity_spotify_auth.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mediaservice_shuffle.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\mediaservice_shuffle.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-hdpi\\ic_play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-mdpi\\ic_play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_search_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_pause_circle_filled_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_pause_circle_filled_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_playlist.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\playlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_play_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-hdpi\\ic_play_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_toolbar.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-xxhdpi\\ic_play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_playlist.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\activity_playlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_play_background.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_play_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_favorite_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_logout_24.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_baseline_logout_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\layout_genre.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\layout\\genre.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_play_circle.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-xxhdpi\\ic_play_circle.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_play.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_play.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_main.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_play_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xhdpi\\ic_play_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_play_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-mdpi\\ic_play_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_play.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable-anydpi\\ic_play.xml"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_play_round.png.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_play_round.png"
+    },
+    {
+        "merged": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\miche\\AndroidStudioProjects\\Genrefy\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    }
+]

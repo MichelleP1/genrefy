@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:label="">
+
+    <item
+        android:id="@+id/miSearch"
+        android:icon="@drawable/ic_baseline_queue_music_24"
+        app:showAsAction="always"
+        android:title="Search">
+    </item>
+    <item
+        android:id="@+id/miLibrary"
+        android:icon="@drawable/ic_baseline_library_music_24"
+        app:showAsAction="always"
+        android:title="Library">
+    </item>
+    <item
+        android:id="@+id/miSettings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        app:showAsAction="always"
+        android:title="Settings">
+    </item>
+</menu>

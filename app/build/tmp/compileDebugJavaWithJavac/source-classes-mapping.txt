@@ -1,0 +1,64 @@
+com/example/genrefy/Genres/GenreListActivity.java
+ com.example.genrefy.Genres.GenreListActivity
+ com.example.genrefy.Genres.GenreListActivity$ListGenresTask
+com/example/genrefy/Base/BaseActivity.java
+ com.example.genrefy.Base.BaseActivity
+com/example/genrefy/Helpers/OnSwipeTouchListener.java
+ com.example.genrefy.Helpers.OnSwipeTouchListener
+ com.example.genrefy.Helpers.OnSwipeTouchListener$1
+ com.example.genrefy.Helpers.OnSwipeTouchListener$GestureListener
+com/example/genrefy/Settings/SettingsFragment.java
+ com.example.genrefy.Settings.SettingsFragment
+ com.example.genrefy.Settings.SettingsFragment$1
+com/example/genrefy/Player/PlayerActivity.java
+ com.example.genrefy.Player.PlayerActivity
+ com.example.genrefy.Player.PlayerActivity$1
+ com.example.genrefy.Player.PlayerActivity$2
+ com.example.genrefy.Player.PlayerActivity$3
+ com.example.genrefy.Player.PlayerActivity$4
+ com.example.genrefy.Player.PlayerActivity$4$1
+ com.example.genrefy.Player.PlayerActivity$5
+ com.example.genrefy.Player.PlayerActivity$6
+com/example/genrefy/Authentication/SaveUserToDatabase.java
+ com.example.genrefy.Authentication.SaveUserToDatabase
+com/example/genrefy/Authentication/LoginActivity.java
+ com.example.genrefy.Authentication.LoginActivity
+ com.example.genrefy.Authentication.LoginActivity$1
+ com.example.genrefy.Authentication.LoginActivity$1$1
+ com.example.genrefy.Authentication.LoginActivity$2
+ com.example.genrefy.Authentication.LoginActivity$3
+ com.example.genrefy.Authentication.LoginActivity$4
+com/example/genrefy/Playlists/PlaylistActivity.java
+ com.example.genrefy.Playlists.PlaylistActivity
+ com.example.genrefy.Playlists.PlaylistActivity$ListPlaylistTask
+ com.example.genrefy.Playlists.PlaylistActivity$ListPlaylistTask$1
+com/example/genrefy/Genres/LibraryActivity.java
+ com.example.genrefy.Genres.LibraryActivity
+ com.example.genrefy.Genres.LibraryActivity$ListLibraryTask
+com/example/genrefy/Authentication/SpotifyAuthActivity.java
+ com.example.genrefy.Authentication.SpotifyAuthActivity
+ com.example.genrefy.Authentication.SpotifyAuthActivity$1
+com/example/genrefy/Playlists/PlaylistAdapter.java
+ com.example.genrefy.Playlists.PlaylistAdapter
+ com.example.genrefy.Playlists.PlaylistAdapter$1
+ com.example.genrefy.Playlists.PlaylistAdapter$PlaylistViewholder
+com/example/genrefy/Authentication/SignUpActivity.java
+ com.example.genrefy.Authentication.SignUpActivity
+ com.example.genrefy.Authentication.SignUpActivity$1
+ com.example.genrefy.Authentication.SignUpActivity$1$1
+ com.example.genrefy.Authentication.SignUpActivity$2
+com/example/genrefy/Settings/SettingsActivity.java
+ com.example.genrefy.Settings.SettingsActivity
+ com.example.genrefy.Settings.SettingsActivity$1
+com/example/genrefy/Genres/GenreAdapter.java
+ com.example.genrefy.Genres.GenreAdapter
+ com.example.genrefy.Genres.GenreAdapter$genresViewholder
+ com.example.genrefy.Genres.GenreAdapter$genresViewholder$1
+com/example/genrefy/Authentication/ValidationHelpers.java
+ com.example.genrefy.Authentication.ValidationHelpers
+com/example/genrefy/Genres/Genre.java
+ com.example.genrefy.Genres.Genre
+com/example/genrefy/MainActivity.java
+ com.example.genrefy.MainActivity
+com/example/genrefy/BuildConfig.java
+ com.example.genrefy.BuildConfig

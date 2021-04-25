@@ -1,0 +1,43 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:key="application_settings"
+    app:singleLineTitle="true">
+
+    <PreferenceCategory
+        app:title="Playback">
+        <SwitchPreferenceCompat
+            android:key="autoplay"
+            android:title="Autoplay"
+            android:summary="Immediately begin playing playlist on open"
+            app:icon="@drawable/ic_autoplay"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Appearance">
+        <DropDownPreference
+            android:key="dropdown"
+            android:title="Font Size"
+            android:summary="Adjust the size of the text"
+            android:entries="@array/size_entries"
+            app:useSimpleSummaryProvider="true"
+            android:entryValues="@array/size_values"
+            app:icon="@drawable/ic_baseline_format_size_24"/>
+        <SwitchPreferenceCompat
+            android:key="showGenre"
+            android:title="Show Genre / Playlist"
+            android:summary="Show the selected genre and playlist in the title bar"
+            app:icon="@drawable/ic_baseline_short_text_24"/>
+        <SwitchPreferenceCompat
+            android:key="backgroundColor"
+            android:title="Player Background Color"
+            android:summary="Have the background color of the music player match the album artwork"
+            app:icon="@drawable/ic_baseline_color_lens_24"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Account">
+        <Preference
+            android:key="logout"
+            android:title="Log Out"
+            android:summary="Log out of the current account"
+            app:icon="@drawable/ic_baseline_logout_24"/>
+    </PreferenceCategory>
+</PreferenceScreen>

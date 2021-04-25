@@ -1,0 +1,4 @@
+include ':spotify-app-remote-release-0.7.1'
+include ':spotify-web-api-android-0.4.1'
+include ':app'
+rootProject.name = "Genrefy"

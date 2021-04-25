@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "251776389111",
+    "firebase_url": "https://genresearch-44765-default-rtdb.firebaseio.com",
+    "project_id": "genresearch-44765",
+    "storage_bucket": "genresearch-44765.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251776389111:android:1adf8f2dfb4b788b3568f2",
+        "android_client_info": {
+          "package_name": "com.example.genrefy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251776389111-bjdhq720u423d95u68ro00fk3g6l0fj7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.genrefy",
+            "certificate_hash": "4357ef43f3b4a97d086da0f7938b3886a0389893"
+          }
+        },
+        {
+          "client_id": "251776389111-pvbe7lf0vgrtca6oc1kl73qi4fbi6ip4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUEvJhY0O_x_YuImlJG_q2ipyemUH_kD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251776389111-pvbe7lf0vgrtca6oc1kl73qi4fbi6ip4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
