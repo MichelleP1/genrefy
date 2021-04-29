@@ -28,6 +28,7 @@ import kaaes.spotify.webapi.android.models.Result;
 import retrofit.client.Response;
 
 import com.example.genrefy.Base.BaseActivity;
+import com.example.genrefy.BuildConfig;
 import com.example.genrefy.Helpers.OnSwipeTouchListener;
 import com.example.genrefy.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -50,8 +51,8 @@ import com.spotify.protocol.types.Track;
  * liked genres to their Genrefy account. */
 public class PlayerActivity extends BaseActivity {
 
-    private static final String REDIRECT_URI = "http://google.com";
-    public static final String CLIENT_ID = "";
+    private static String CLIENT_ID = BuildConfig.SPOTIFY_CLIENT_API_KEY;
+    private static final String REDIRECT_URI = "genrefy-login://callback";
     private SharedPreferences msharedPreferences;
     private SpotifyAppRemote mSpotifyAppRemote;
     private PlayerState state;

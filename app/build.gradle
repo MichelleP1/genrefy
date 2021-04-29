@@ -3,11 +3,17 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
+def apikeyPropertiesFile = rootProject.file("apikey.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
+        buildConfigField("String", "SPOTIFY_CLIENT_API_KEY", apikeyProperties['SPOTIFY_CLIENT_API_KEY'])
+
         applicationId "com.example.genrefy"
         minSdkVersion 19
         targetSdkVersion 30

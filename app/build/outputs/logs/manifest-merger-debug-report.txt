@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-38:12
 MERGED from [com.github.kaaes:spotify-web-api-android:0.4.1] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\a545e305f1f581b8e8cdabe1ec4d464a\jetified-spotify-web-api-android-0.4.1\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.preference:preference:1.1.1] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\2e0f55209ba31d2eb38c283b56cd25c9\preference-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.spotify.android:auth:1.1.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\621a7a10620222c398cba52d9464273d\jetified-auth-1.1.0\AndroidManifest.xml:22:1-55:12
@@ -66,25 +66,25 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\miche\.gradle\cache
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\6c283dd7ca21d3943bea980a8c0c2127\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\bd814a6486739130691b8476700de0b3\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\55bf31807a0b6d96a37e9578ec75f688\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-38:12
 		INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:1-38:12
 		INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:5:5-33:19
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:5:5-34:19
 MERGED from [com.github.kaaes:spotify-web-api-android:0.4.1] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\a545e305f1f581b8e8cdabe1ec4d464a\jetified-spotify-web-api-android-0.4.1\AndroidManifest.xml:11:5-20
 MERGED from [com.github.kaaes:spotify-web-api-android:0.4.1] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\a545e305f1f581b8e8cdabe1ec4d464a\jetified-spotify-web-api-android-0.4.1\AndroidManifest.xml:11:5-20
 MERGED from [com.spotify.android:auth:1.1.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\621a7a10620222c398cba52d9464273d\jetified-auth-1.1.0\AndroidManifest.xml:33:5-53:19
@@ -133,68 +133,72 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\mi
 		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:11:9-68
+activity#com.example.genrefy.RandomSearch
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:12:9-59
+	android:name
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:12:19-47
 activity#com.example.genrefy.Settings.SettingsActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:12:9-72
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:13:9-63
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:12:19-60
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:13:19-60
 activity#com.example.genrefy.Genres.LibraryActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:13:9-60
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:14:9-60
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:13:19-57
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:14:19-57
 activity#com.example.genrefy.Authentication.SpotifyAuthActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:15:9-72
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:16:9-72
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:15:19-69
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:16:19-69
 activity#com.example.genrefy.TestPlayerActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:16:9-56
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:17:9-56
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:16:19-53
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:17:19-53
 activity#com.example.genrefy.Player.PlayerActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:17:9-59
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:18:9-59
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:17:19-56
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:18:19-56
 activity#com.example.genrefy.Playlists.PlaylistActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:18:9-64
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:19:9-64
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:18:19-61
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:19:19-61
 activity#com.example.genrefy.Genres.GenreListActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:19:9-62
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:20:9-62
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:19:19-59
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:20:19-59
 activity#com.spotify.sdk.android.authentication.LoginActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:20:9-23:75
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:21:9-24:75
 MERGED from [com.spotify.android:auth:1.1.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\621a7a10620222c398cba52d9464273d\jetified-auth-1.1.0\AndroidManifest.xml:49:9-52:20
 MERGED from [com.spotify.android:auth:1.1.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\621a7a10620222c398cba52d9464273d\jetified-auth-1.1.0\AndroidManifest.xml:49:9-52:20
 	android:launchMode
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:22:13-42
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:23:13-42
 	android:theme
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:23:13-72
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:24:13-72
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:21:13-80
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:22:13-80
 activity#com.example.genrefy.Authentication.SignUpActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:24:9-67
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:25:9-67
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:24:19-64
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:25:19-64
 activity#com.example.genrefy.Authentication.LoginActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:25:9-66
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:26:9-66
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:25:19-63
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:26:19-63
 activity#com.example.genrefy.MainActivity
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:26:9-32:20
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:27:9-33:20
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:26:19-47
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:27:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:27:13-31:29
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:30:17-77
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:30:27-74
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:31:27-74
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:35:5-67
+ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:36:5-67
 MERGED from [com.spotify.android:auth:1.1.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\621a7a10620222c398cba52d9464273d\jetified-auth-1.1.0\AndroidManifest.xml:31:5-67
 MERGED from [com.spotify.android:auth:1.1.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\621a7a10620222c398cba52d9464273d\jetified-auth-1.1.0\AndroidManifest.xml:31:5-67
 MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\7300e1d3632072bef57cf2f11d699e26\jetified-firebase-auth-20.0.3\AndroidManifest.xml:23:5-67
@@ -204,7 +208,7 @@ MERGED from [com.firebaseui:firebase-ui-database:6.2.1] C:\Users\miche\.gradle\c
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\d55f720c181e9f3c2ff8e300b23dd68f\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\miche\.gradle\caches\transforms-2\files-2.1\d55f720c181e9f3c2ff8e300b23dd68f\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:35:22-64
+		ADDED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml:36:22-64
 uses-sdk
 INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\miche\AndroidStudioProjects\Genrefy\app\src\main\AndroidManifest.xml

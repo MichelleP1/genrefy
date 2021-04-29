@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.genrefy.BuildConfig;
 import com.example.genrefy.Genres.GenreListActivity;
 import com.example.genrefy.R;
 import com.spotify.sdk.android.authentication.AuthenticationClient;
@@ -15,11 +16,10 @@ import com.spotify.sdk.android.authentication.AuthenticationResponse;
 
 /* Authenticate user through Spotify Android SDK authentication */
 public class SpotifyAuthActivity extends AppCompatActivity {
-
+    private static String CLIENT_ID = BuildConfig.SPOTIFY_CLIENT_API_KEY;
+    private static final String REDIRECT_URI = "genrefy-login://callback";
     private static final int REQUEST_CODE = 1337;
     private SharedPreferences.Editor editor;
-    private static final String REDIRECT_URI = "http://google.com";
-    public static final String CLIENT_ID = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

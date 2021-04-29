@@ -2294,6 +2294,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvGenreName
 id tvLogin
 id tvSignup
 id unchecked
@@ -2377,6 +2378,7 @@ layout activity_login
 layout activity_main
 layout activity_player
 layout activity_playlist
+layout activity_random_search
 layout activity_settings
 layout activity_sign_up
 layout activity_spotify_auth

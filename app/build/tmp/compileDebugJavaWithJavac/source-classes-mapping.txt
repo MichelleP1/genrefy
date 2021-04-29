@@ -19,6 +19,8 @@ com/example/genrefy/Player/PlayerActivity.java
  com.example.genrefy.Player.PlayerActivity$4$1
  com.example.genrefy.Player.PlayerActivity$5
  com.example.genrefy.Player.PlayerActivity$6
+com/example/genrefy/RandomSearch.java
+ com.example.genrefy.RandomSearch
 com/example/genrefy/Authentication/SaveUserToDatabase.java
  com.example.genrefy.Authentication.SaveUserToDatabase
 com/example/genrefy/Authentication/LoginActivity.java
