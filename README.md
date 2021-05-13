@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#usage">Download</a> •
+  <a href="#usage">Usage</a> •
   <a href="#credits">Credits</a>
 </p>
 
@@ -35,12 +35,26 @@
 
 
 ## Usage
-
-Use
+<h5> Discover new music by selecting a genre and related playlist to try out:</h5>
+<p align="center">
+  <img src="play.gif" alt="play" />
+</p>
+<h5> Add songs you like directly to your Spotify account:</h5>
+<p align="center">
+  <img src="like.gif" alt="like" />
+</p>
+<h5> Follow entire playlists you enjoy on your Spotify account:</h5>
+<p align="center">
+  <img src="follow.gif" alt="follow" />
+</p>
+<h5> Save genres you like on the Genrefy app to listen again later:</h5>
+<p align="center">
+  <img src="genre.gif" alt="genre" />
+</p>
 
 ## Credits
 
 Open source material used for this application:
-- [Spotify Dataset 1922-2021, ~600k Tracks](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data_by_genres.csv) -List of 3000+ Spotify genres
+- [Spotify Dataset 1922-2021, ~600k Tracks](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data_by_genres.csv) - List of 3000+ Spotify genres
 - [Spotify Android SDK](https://github.com/spotify/android-sdk) - Spotify authentication & remote player
 - [Spotify Web API for Android](https://github.com/kaaes/spotify-web-api-android) - Spotify API interaction
