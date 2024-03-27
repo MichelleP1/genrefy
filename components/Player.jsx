@@ -12,8 +12,8 @@ import {
 import { Button } from "./Button";
 import axios from "axios";
 // import { LoadingSpinner } from "./LoadingSpinner/LoadingSpinner";
-// import "./player.scss";
-// import Browse from "../Browse/browse";
+import styles from "./player.module.scss";
+import Browse from "./browse";
 
 const track = {
   name: "",
@@ -214,16 +214,19 @@ function Player(props) {
   return active ? (
     loaded ? (
       <>
-        <div className="main">
-          {/* <Browse onChangeGenre={handleChangePlaylist}></Browse> */}
-          <h3 className="genre">{genre}</h3>
-          <h5 className="playlist">{playlist.name}</h5>
-          <img className="album-image" src={currentTrack.album.images[0].url} />
-          <h5 className="track">
+        <div className={styles.main}>
+          <Browse onChangeGenre={handleChangePlaylist}></Browse>
+          <h3 className={styles.genre}>{genre}</h3>
+          <h5 className={styles.playlist}>{playlist.name}</h5>
+          <img
+            className={styles.album_image}
+            src={currentTrack.album.images[0].url}
+          />
+          <h5 className={styles.track}>
             {currentTrack.name} - {currentTrack.artists[0].name}
           </h5>
           <div>
-            <div className="player-controls">
+            <div className={styles.player_controls}>
               <Button title={<FaFastBackward />} onClick={handleRewind} />
               <Button title={<FaStepBackward />} onClick={handlePrevious} />
               <Button
@@ -233,11 +236,11 @@ function Player(props) {
               <Button title={<FaStepForward />} onClick={handleNext} />
               <Button title={<FaFastForward />} onClick={handleFastForward} />
             </div>
-            <div className="genre-playlist-controls">
+            <div className={styles.genre_playlist_controls}>
               <Button title="Change Genre" onClick={handleChangeGenre} />
               <Button title="Change Playlist" onClick={handleChangePlaylist} />
             </div>
-            <div className="like-follow-controls">
+            <div className={styles.like_follow_controls}>
               <Button title="Like" onClick={handleSaveTrack} />
               <Button title="Follow" onClick={handleFollowPlaylist} />
             </div>

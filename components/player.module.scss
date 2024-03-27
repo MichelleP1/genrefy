@@ -1,0 +1,62 @@
+body > #root > div {
+  height: 100vh;
+  font-size: 100%;
+}
+
+// html {
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+//   height: 100%;
+// }
+// *,
+// *:before,
+// *:after {
+//   -webkit-box-sizing: inherit;
+//   -moz-box-sizing: inherit;
+//   box-sizing: inherit;
+// }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.genre {
+  // flex: 2;
+  font-size: 1.75em;
+}
+
+.playlist {
+  font-size: 1.25em;
+}
+
+.album_image {
+  // flex: 1;
+  aspect-ratio: 1 / 1;
+  // min-width: 30%;
+  // height: 70%;
+  min-width: 25%;
+  max-width: 90%;
+  // width: 90%;
+
+  // position: relative;
+  // width: 20%;
+}
+
+.track {
+  font-size: 1.25em;
+}
+
+.player_controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  min-width: 25%;
+  max-width: 90%;
+}
+
+.genre_playlist_controls {
+}

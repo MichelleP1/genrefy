@@ -15,6 +15,9 @@ const login = (req: NextApiRequest, res: NextApiResponse) => {
   const scope: string = "streaming user-read-email user-read-private";
   const spotify_redirect_uri =
     "https://genrefy-o9la.vercel.app/api/auth/callback";
+
+  // const spotify_redirect_uri = "http://localhost:3000/api/auth/callback";
+
   const state: string = generateRandomString(16);
 
   let spotify_client_id: string = "";

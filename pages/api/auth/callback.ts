@@ -32,6 +32,8 @@ const callback = async (req: NextApiRequest, res: NextApiResponse) => {
   const spotify_redirect_uri =
     "https://genrefy-o9la.vercel.app/api/auth/callback";
 
+  // const spotify_redirect_uri = "http://localhost:3000/api/auth/callback";
+
   let spotify_client_id: string = "";
   if (process.env.SPOTIFY_CLIENT_ID) {
     spotify_client_id = process.env.SPOTIFY_CLIENT_ID;
