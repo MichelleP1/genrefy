@@ -3,7 +3,7 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import Login from "../components/login";
-import Player from "../components/player";
+import Player from "../components/Player";
 
 export default function Home({ token }) {
   // const [token, setToken] = useState("");
