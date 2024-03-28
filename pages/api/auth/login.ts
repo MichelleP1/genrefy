@@ -6,7 +6,7 @@ export default (_, res: NextApiResponse) => {
     response_type: "code",
     client_id: process.env.SPOTIFY_CLIENT_ID,
     scope: "streaming user-read-email user-read-private",
-    redirect_uri: "https://genrefy-o9la.vercel.app/api/auth/callback",
+    redirect_uri: `${process.env.APP_URL}/api/auth/callback`,
     state: generateRandomString(16),
   });
 
