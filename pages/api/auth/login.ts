@@ -1,41 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiResponse } from "next";
+import generateRandomString from "../../../lib/util/generate_random_string";
 
-const generateRandomString = (length: number): string => {
-  let text = "";
-  const possible =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  for (let i = 0; i < length; i++) {
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  }
-  return text;
-};
-
-const login = (req: NextApiRequest, res: NextApiResponse) => {
-  const scope: string = "streaming user-read-email user-read-private";
-  const spotify_redirect_uri =
-    "https://genrefy-o9la.vercel.app/api/auth/callback";
-
-  // const spotify_redirect_uri = "http://localhost:3000/api/auth/callback";
-
-  const state: string = generateRandomString(16);
-
-  let spotify_client_id: string = "";
-  if (process.env.SPOTIFY_CLIENT_ID) {
-    spotify_client_id = process.env.SPOTIFY_CLIENT_ID;
-  } else {
-    console.error(
-      'Undefined Error: An environmental variable, "SPOTIFY_CLIENT_ID", has something wrong.'
-    );
-  }
-  console.log("client id" + spotify_client_id);
-
+export default (_, res: NextApiResponse) => {
   const auth_query_parameters = new URLSearchParams({
     response_type: "code",
-    client_id: spotify_client_id,
-    scope: scope,
-    redirect_uri: spotify_redirect_uri,
-    state: state,
+    client_id: process.env.SPOTIFY_CLIENT_ID,
+    scope: "streaming user-read-email user-read-private",
+    redirect_uri: "https://genrefy-o9la.vercel.app/api/auth/callback",
+    state: generateRandomString(16),
   });
 
   res.redirect(
@@ -43,5 +15,3 @@ const login = (req: NextApiRequest, res: NextApiResponse) => {
       auth_query_parameters.toString()
   );
 };
-
-export default login;
