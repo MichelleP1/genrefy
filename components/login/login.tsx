@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-function Login() {
+export const Login = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -11,6 +11,6 @@ function Login() {
       </header>
     </div>
   );
-}
+};
 
 export default Login;

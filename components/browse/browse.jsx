@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./browse.module.scss";
-import { genres } from "../public/genres";
+import { genres } from "../../public/genres";
 import Autocomplete from "@mui/material/Autocomplete";
 import { TextField } from "@mui/material";
 
-function Browse({ onChangeGenre }) {
+export const Browse = ({ onChangeGenre }) => {
   //onChangeGenre(null, genre)}
   const [value, setValue] = useState(genres[0]);
 
@@ -27,6 +27,4 @@ function Browse({ onChangeGenre }) {
       renderInput={(params) => <TextField {...params} label="Genres" />}
     />
   );
-}
-
-export default Browse;
+};

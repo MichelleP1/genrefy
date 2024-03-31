@@ -1,39 +1,20 @@
-body > #root > div {
-  height: 100vh;
-  font-size: 100%;
-}
-
-// html {
-//   -webkit-box-sizing: border-box;
-//   -moz-box-sizing: border-box;
-//   box-sizing: border-box;
-//   height: 100%;
-// }
-// *,
-// *:before,
-// *:after {
-//   -webkit-box-sizing: inherit;
-//   -moz-box-sizing: inherit;
-//   box-sizing: inherit;
-// }
-
-.main {
+.player_main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: stretch;
 }
 
-.genre {
+.player_genre {
   // flex: 2;
   font-size: 1.75em;
 }
 
-.playlist {
+.player_playlist {
   font-size: 1.25em;
 }
 
-.album_image {
+.player_album_image {
   // flex: 1;
   aspect-ratio: 1 / 1;
   // min-width: 30%;
@@ -46,7 +27,7 @@ body > #root > div {
   // width: 20%;
 }
 
-.track {
+.player_track {
   font-size: 1.25em;
 }
 
@@ -58,5 +39,8 @@ body > #root > div {
   max-width: 90%;
 }
 
-.genre_playlist_controls {
+.player_genre_playlist_controls {
+}
+
+.player_like_follow_controls {
 }

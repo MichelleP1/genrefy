@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { genres } from "../public/genres";
+import axios from "axios";
+import { genres } from "../../public/genres";
+import { Inactive } from "../inactive/inactive";
+import { Button } from "../button/button";
+import { Browse } from "../browse/browse";
 import {
   FaPlay,
   FaPause,
@@ -8,12 +12,16 @@ import {
   FaStepForward,
   FaFastForward,
 } from "react-icons/fa";
-// import { Inactive } from "./Inactive";
-import { Button } from "./Button";
-import axios from "axios";
-// import { LoadingSpinner } from "./LoadingSpinner/LoadingSpinner";
-import styles from "./player.module.scss";
-import Browse from "./browse";
+import {
+  player_main,
+  player_genre,
+  player_playlist,
+  player_album_image,
+  player_track,
+  player_controls,
+  player_genre_playlist_controls,
+  player_like_follow_controls,
+} from "./player.module.scss";
 
 const track = {
   name: "",
@@ -23,10 +31,7 @@ const track = {
   artists: [{ name: "" }],
 };
 
-function Player(props) {
-  const { token } = props;
-  console.log("token " + token);
-
+export const Player = ({ token }) => {
   // const { token, setToken } = props;
   const [paused, setPaused] = useState(false);
   const [active, setActive] = useState(true);
@@ -51,8 +56,6 @@ function Player(props) {
     setSpotifyPlayer();
 
     return () => {
-      console.log("leaving");
-      console.log(player.current);
       player.current.disconnect();
       setActive(false);
       setCurrentTrack(track);
@@ -65,8 +68,6 @@ function Player(props) {
   }, []);
 
   const setSpotifyPlayer = () => {
-    console.log("setSpotifyPlayer token");
-    console.log(token);
     const script = document.createElement("script");
     script.src = urlScript;
     script.async = true;
@@ -80,12 +81,8 @@ function Player(props) {
         },
         volume: 0.5,
       });
-      // setPlayer(player);
-      console.log(player.current);
 
       player.current.addListener("ready", ({ device_id }) => {
-        console.log("ready");
-
         deviceID.current = device_id;
         handleChangeGenre();
       });
@@ -97,8 +94,6 @@ function Player(props) {
       });
 
       player.current.addListener("player_state_changed", (state) => {
-        console.log("player_state_changed");
-
         if (!state) return;
 
         const track = state.track_window.current_track;
@@ -117,8 +112,6 @@ function Player(props) {
       // player.disconnect();
 
       if (!connection) {
-        console.log(player.current);
-
         // setToken("");
         alert("Your session has expired - please sign in again");
       }
@@ -133,12 +126,9 @@ function Player(props) {
   };
 
   const getNewGenrePlaylist = async (genre) => {
-    console.log("getNewGenrePlaylist");
     const genrePlaylist = await querySpotify(
       `${urlPrefix}search?q=sound of ${genre}&type=playlist&limit=10`
     );
-    console.log("genrePlaylist");
-    console.log(genrePlaylist);
     const playlists = genrePlaylist?.data?.playlists?.items;
     setPlaylists(playlists);
     setGenre(genre);
@@ -146,29 +136,20 @@ function Player(props) {
   };
 
   const getCurrentGenreNextPlaylist = () => {
-    console.log("getCurrentGenreNextPlaylist");
     const index = playlists.findIndex((x) => x.name === playlist.name) + 1 || 0;
-    console.log(playlists);
     return playlists?.[index];
   };
 
   const handleChangeGenre = async () => {
-    console.log("genres");
-    console.log(genres);
     const randomGenre = genres[Math.floor(Math.random() * genres.length)];
-    console.log(randomGenre);
     handleChangePlaylist(null, randomGenre);
   };
 
   const handleChangePlaylist = async (_, newGenre = null) => {
-    console.log("handleChangePlaylist newGenre");
-    console.log(newGenre);
     const newPlaylist = newGenre
       ? await getNewGenrePlaylist(newGenre)
       : getCurrentGenreNextPlaylist();
     setPlaylist(newPlaylist);
-    console.log("newPlaylist");
-    console.log(newPlaylist);
     const playlistReturn = await querySpotify(newPlaylist.tracks.href);
     const tracks = playlistReturn.data.items;
     const uris = tracks.map((track) => `spotify:track:${track?.track?.id}`);
@@ -214,19 +195,19 @@ function Player(props) {
   return active ? (
     loaded ? (
       <>
-        <div className={styles.main}>
+        <div className={player_main}>
           <Browse onChangeGenre={handleChangePlaylist}></Browse>
-          <h3 className={styles.genre}>{genre}</h3>
-          <h5 className={styles.playlist}>{playlist.name}</h5>
+          <h3 className={player_genre}>{genre}</h3>
+          <h5 className={player_playlist}>{playlist.name}</h5>
           <img
-            className={styles.album_image}
+            className={player_album_image}
             src={currentTrack.album.images[0].url}
           />
-          <h5 className={styles.track}>
+          <h5 className={player_track}>
             {currentTrack.name} - {currentTrack.artists[0].name}
           </h5>
           <div>
-            <div className={styles.player_controls}>
+            <div className={player_controls}>
               <Button title={<FaFastBackward />} onClick={handleRewind} />
               <Button title={<FaStepBackward />} onClick={handlePrevious} />
               <Button
@@ -236,11 +217,11 @@ function Player(props) {
               <Button title={<FaStepForward />} onClick={handleNext} />
               <Button title={<FaFastForward />} onClick={handleFastForward} />
             </div>
-            <div className={styles.genre_playlist_controls}>
+            <div className={player_genre_playlist_controls}>
               <Button title="Change Genre" onClick={handleChangeGenre} />
               <Button title="Change Playlist" onClick={handleChangePlaylist} />
             </div>
-            <div className={styles.like_follow_controls}>
+            <div className={player_like_follow_controls}>
               <Button title="Like" onClick={handleSaveTrack} />
               <Button title="Follow" onClick={handleFollowPlaylist} />
             </div>
@@ -249,12 +230,10 @@ function Player(props) {
       </>
     ) : (
       <h1>loading</h1>
-      // <LoadingSpinner />
     )
   ) : (
-    <h1>inactive</h1>
-    // <Inactive />
+    <Inactive />
   );
-}
+};
 
 export default Player;

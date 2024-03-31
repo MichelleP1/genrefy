@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { serialize, CookieSerializeOptions } from "cookie";
 import axios from "axios";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export const CallBack = (req: NextApiRequest, res: NextApiResponse) => {
   const params = {
     code: req.query.code.toString(),
     redirect_uri: `${process.env.APP_URL}/api/auth/callback`,

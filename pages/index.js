@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Login from "../components/login";
-import Player from "../components/Player";
+import { Login } from "../components/login/login";
+import { Player } from "../components/player/player";
 
 export default function Home({ auth_token }) {
   const [token, setToken] = useState(auth_token);
