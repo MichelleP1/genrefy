@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { genres } from "../../lib/static/genres";
 import { Inactive } from "../connectivity/inactive/inactive";
 import { Button } from "../ui/button/button";
 import { Browse } from "../browse/browse";
@@ -51,13 +50,6 @@ export const Player = ({ token }) => {
 
     return () => {
       player.current.disconnect();
-      setActive(false);
-      setCurrentTrack(track);
-      setGenre("");
-      setPlaylist("");
-      setPlaylists([]);
-      setLoaded(false);
-      trackName.current = "";
     };
   }, []);
 
@@ -97,7 +89,6 @@ export const Player = ({ token }) => {
       });
 
       const connection = await player.current.connect();
-
       if (!connection) {
         setPlayerToken("");
         alert("Your session has expired - please sign in again");
@@ -112,20 +103,15 @@ export const Player = ({ token }) => {
     return playlists[0];
   };
 
-  const getCurrentGenreNextPlaylist = () => {
-    const index = playlists.findIndex((x) => x.name === playlist.name) + 1 || 0;
-    return playlists?.[index];
-  };
-
   const handleChangeGenre = async () => {
-    const randomGenre = genres[Math.floor(Math.random() * genres.length)];
+    const randomGenre = PlayerService.getRandomGenre();
     handleChangePlaylist(null, randomGenre);
   };
 
   const handleChangePlaylist = async (_, newGenre = null) => {
     const newPlaylist = newGenre
       ? await getNewGenrePlaylist(newGenre)
-      : getCurrentGenreNextPlaylist();
+      : PlayerService.getCurrentGenreNextPlaylist(playlists, playlist);
     setPlaylist(newPlaylist);
     const tracks = await PlayerService.getPlaylistTracks(
       token,

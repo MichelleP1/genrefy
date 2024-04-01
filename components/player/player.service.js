@@ -1,4 +1,5 @@
 import axios from "axios";
+import { genres } from "../../lib/static/genres";
 import { URL_PREFIX } from "../../lib/static/constants";
 
 const querySpotify = async (token, url) => {
@@ -54,5 +55,14 @@ export const PlayerService = {
 
   followPlaylist: async (token, playListID) => {
     updateSpotify(token, `${URL_PREFIX}playlists/${playListID}/followers`);
+  },
+
+  getRandomGenre: () => {
+    return genres[Math.floor(Math.random() * genres.length)];
+  },
+
+  getCurrentGenreNextPlaylist: (playlists, playlist) => {
+    const index = playlists.findIndex((x) => x.name === playlist.name) + 1 || 0;
+    return playlists?.[index];
   },
 };
