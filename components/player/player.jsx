@@ -39,7 +39,6 @@ export const Player = ({ token }) => {
   const [genre, setGenre] = useState("");
   const [playlist, setPlaylist] = useState("");
   const [playlists, setPlaylists] = useState([]);
-  const [loaded, setLoaded] = useState(false);
   const deviceID = useRef("");
   const trackName = useRef("");
   const position = useRef(0);
@@ -81,7 +80,6 @@ export const Player = ({ token }) => {
         trackName.current = track.name;
         setCurrentTrack(track);
         setPaused(state.paused);
-        setLoaded(true);
 
         player.current.getCurrentState().then((state) => {
           !state ? setActive(false) : setActive(true);
@@ -96,25 +94,25 @@ export const Player = ({ token }) => {
     };
   };
 
-  const handleChangeGenre = async () => {
-    const randomGenre = PlayerService.getRandomGenre();
-    const playlists = await PlayerService.getPlaylist(token, randomGenre);
+  const handleChangeGenre = async (_, selectedGenre = null) => {
+    const genre = selectedGenre || PlayerService.getRandomGenre();
+    const playlists = await PlayerService.getPlaylist(token, genre);
     const playlist = playlists[0];
 
     setPlaylists(playlists);
     setPlaylist(playlist);
-    setGenre(randomGenre);
+    setGenre(genre);
 
     PlayerService.updatePlayer(token, deviceID.current, playlist.tracks.href);
   };
 
   const handleChangePlaylist = async () => {
-    const newPlaylist = PlayerService.getCurrentGenreNextPlaylist(
+    const playlist = PlayerService.getCurrentGenreNextPlaylist(
       playlists,
       playlist
     );
 
-    setPlaylist(newPlaylist);
+    setPlaylist(playlist);
 
     PlayerService.updatePlayer(
       token,
@@ -155,10 +153,10 @@ export const Player = ({ token }) => {
   };
 
   return active ? (
-    loaded ? (
+    playlist ? (
       <>
         <div className={player_main}>
-          <Browse onChangeGenre={handleChangePlaylist}></Browse>
+          <Browse onChangeGenre={handleChangeGenre}></Browse>
           <h3 className={player_genre}>{genre}</h3>
           <h5 className={player_playlist}>{playlist.name}</h5>
           <img

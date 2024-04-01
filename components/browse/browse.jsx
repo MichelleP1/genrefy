@@ -5,10 +5,9 @@ import Autocomplete from "@mui/material/Autocomplete";
 import { TextField } from "@mui/material";
 
 export const Browse = ({ onChangeGenre }) => {
-  //onChangeGenre(null, genre)}
   const [value, setValue] = useState(genres[0]);
 
-  const setGenreValue = (event, newValue) => {
+  const setGenreValue = (_, newValue) => {
     setValue(newValue);
     onChangeGenre(null, newValue);
   };
