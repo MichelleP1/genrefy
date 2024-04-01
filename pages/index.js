@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Login } from "../components/login/login";
+import { Login } from "../components/connectivity/login/login";
 import { Player } from "../components/player/player";
 
 export default function Home({ auth_token }) {

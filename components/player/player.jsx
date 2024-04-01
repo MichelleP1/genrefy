@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import axios from "axios";
-import { genres } from "../../public/genres";
-import { Inactive } from "../inactive/inactive";
-import { Button } from "../button/button";
+import { genres } from "../../lib/static/genres";
+import { Inactive } from "../connectivity/inactive/inactive";
+import { Button } from "../ui/button/button";
 import { Browse } from "../browse/browse";
+import { PlayerService } from "./player.service";
 import {
   FaPlay,
   FaPause,
@@ -22,6 +22,7 @@ import {
   player_genre_playlist_controls,
   player_like_follow_controls,
 } from "./player.module.scss";
+import { SPOTIFY_SCRIPT } from "../../lib/static/constants";
 
 const track = {
   name: "",
@@ -32,7 +33,7 @@ const track = {
 };
 
 export const Player = ({ token }) => {
-  // const { token, setToken } = props;
+  const [playerToken, setPlayerToken] = useState(token);
   const [paused, setPaused] = useState(false);
   const [active, setActive] = useState(true);
   const [currentTrack, setCurrentTrack] = useState(track);
@@ -43,13 +44,6 @@ export const Player = ({ token }) => {
   const deviceID = useRef("");
   const trackName = useRef("");
   const position = useRef(0);
-  const urlScript = "https://sdk.scdn.co/spotify-player.js";
-  const urlPrefix = "https://api.spotify.com/v1/";
-  const headers = {
-    Authorization: "Bearer " + token,
-    Accept: "application/json",
-    "Content-Type": "application/json",
-  };
   const player = useRef(null);
 
   useEffect(() => {
@@ -69,7 +63,7 @@ export const Player = ({ token }) => {
 
   const setSpotifyPlayer = () => {
     const script = document.createElement("script");
-    script.src = urlScript;
+    script.src = SPOTIFY_SCRIPT;
     script.async = true;
     document.body.appendChild(script);
 
@@ -77,7 +71,7 @@ export const Player = ({ token }) => {
       player.current = new window.Spotify.Player({
         name: "Web Playback SDK",
         getOAuthToken: (cb) => {
-          cb(token);
+          cb(playerToken);
         },
         volume: 0.5,
       });
@@ -85,12 +79,6 @@ export const Player = ({ token }) => {
       player.current.addListener("ready", ({ device_id }) => {
         deviceID.current = device_id;
         handleChangeGenre();
-      });
-
-      player.current.addListener("not_ready", ({ device_id }) => {
-        console.log("Device ID has gone offline");
-
-        console.log("Device ID has gone offline", device_id);
       });
 
       player.current.addListener("player_state_changed", (state) => {
@@ -109,27 +97,16 @@ export const Player = ({ token }) => {
       });
 
       const connection = await player.current.connect();
-      // player.disconnect();
 
       if (!connection) {
-        // setToken("");
+        setPlayerToken("");
         alert("Your session has expired - please sign in again");
       }
     };
   };
 
-  const querySpotify = async (url) => {
-    return await axios.get(url, {
-      params: { limit: 50, offset: 0 },
-      headers,
-    });
-  };
-
   const getNewGenrePlaylist = async (genre) => {
-    const genrePlaylist = await querySpotify(
-      `${urlPrefix}search?q=sound of ${genre}&type=playlist&limit=10`
-    );
-    const playlists = genrePlaylist?.data?.playlists?.items;
+    const playlists = await PlayerService.getPlaylist(token, genre);
     setPlaylists(playlists);
     setGenre(genre);
     return playlists[0];
@@ -150,11 +127,12 @@ export const Player = ({ token }) => {
       ? await getNewGenrePlaylist(newGenre)
       : getCurrentGenreNextPlaylist();
     setPlaylist(newPlaylist);
-    const playlistReturn = await querySpotify(newPlaylist.tracks.href);
-    const tracks = playlistReturn.data.items;
+    const tracks = await PlayerService.getPlaylistTracks(
+      token,
+      newPlaylist.tracks.href
+    );
     const uris = tracks.map((track) => `spotify:track:${track?.track?.id}`);
-    const urlPlayer = `${urlPrefix}me/player/play?device_id=${deviceID.current}`;
-    axios.put(urlPlayer, { uris }, { headers });
+    PlayerService.updatePlayer(token, deviceID.current, uris);
   };
 
   const handlePlay = () => {
@@ -181,15 +159,11 @@ export const Player = ({ token }) => {
   };
 
   const handleSaveTrack = () => {
-    axios.put(`${urlPrefix}me/tracks?ids=${currentTrack.id}`, {}, { headers });
+    PlayerService.saveTrack(token, currentTrack.id);
   };
 
   const handleFollowPlaylist = () => {
-    axios.put(
-      `${urlPrefix}playlists/${playlist.id}/followers`,
-      {},
-      { headers }
-    );
+    PlayerService.followPlaylist(token, playlist.id);
   };
 
   return active ? (

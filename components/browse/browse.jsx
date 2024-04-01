@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./browse.module.scss";
-import { genres } from "../../public/genres";
+import { genres } from "../../lib/static/genres";
 import Autocomplete from "@mui/material/Autocomplete";
 import { TextField } from "@mui/material";
 
