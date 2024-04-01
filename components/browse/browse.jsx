@@ -19,7 +19,6 @@ export const Browse = ({ onChangeGenre }) => {
       value={value}
       onChange={(event, newValue) => {
         setGenreValue(event, newValue);
-        // setValue(newValue);
       }}
       disableClearable
       options={genres}

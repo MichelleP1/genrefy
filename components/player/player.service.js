@@ -41,7 +41,10 @@ export const PlayerService = {
     return tracks?.data?.items;
   },
 
-  updatePlayer: async (token, deviceID, uris) => {
+  updatePlayer: async (token, deviceID, trackUrl) => {
+    const tracks = await PlayerService.getPlaylistTracks(token, trackUrl);
+    const uris = tracks.map((track) => `spotify:track:${track?.track?.id}`);
+
     updateSpotify(
       token,
       `${URL_PREFIX}me/player/play?device_id=${deviceID}`,

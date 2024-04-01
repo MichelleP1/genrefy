@@ -96,29 +96,31 @@ export const Player = ({ token }) => {
     };
   };
 
-  const getNewGenrePlaylist = async (genre) => {
-    const playlists = await PlayerService.getPlaylist(token, genre);
-    setPlaylists(playlists);
-    setGenre(genre);
-    return playlists[0];
-  };
-
   const handleChangeGenre = async () => {
     const randomGenre = PlayerService.getRandomGenre();
-    handleChangePlaylist(null, randomGenre);
+    const playlists = await PlayerService.getPlaylist(token, randomGenre);
+    const playlist = playlists[0];
+
+    setPlaylists(playlists);
+    setPlaylist(playlist);
+    setGenre(randomGenre);
+
+    PlayerService.updatePlayer(token, deviceID.current, playlist.tracks.href);
   };
 
-  const handleChangePlaylist = async (_, newGenre = null) => {
-    const newPlaylist = newGenre
-      ? await getNewGenrePlaylist(newGenre)
-      : PlayerService.getCurrentGenreNextPlaylist(playlists, playlist);
+  const handleChangePlaylist = async () => {
+    const newPlaylist = PlayerService.getCurrentGenreNextPlaylist(
+      playlists,
+      playlist
+    );
+
     setPlaylist(newPlaylist);
-    const tracks = await PlayerService.getPlaylistTracks(
+
+    PlayerService.updatePlayer(
       token,
+      deviceID.current,
       newPlaylist.tracks.href
     );
-    const uris = tracks.map((track) => `spotify:track:${track?.track?.id}`);
-    PlayerService.updatePlayer(token, deviceID.current, uris);
   };
 
   const handlePlay = () => {
