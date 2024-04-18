@@ -142,6 +142,7 @@ export const Player = ({ token }) => {
       <>
         <div className={styles.player_main}>
           <Browse onChangeGenre={handleChangeGenre}></Browse>
+
           <h5 className={styles.player_genre}>{genre}</h5>
           <h5 className={styles.player_playlist}>{playlist.name}</h5>
           <img

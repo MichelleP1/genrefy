@@ -21,8 +21,13 @@ export const Browse = ({ onChangeGenre }) => {
       }}
       disableClearable
       options={genres}
-      sx={{ width: 300 }}
+      sx={{ width: 400 }}
       renderInput={(params) => <TextField {...params} label="Genres" />}
+      inputProps={{
+        style: {
+          padding: 5,
+        },
+      }}
     />
   );
 };
