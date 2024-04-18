@@ -1,11 +1,10 @@
 .player_main {
-  min-width: 300px;
-  max-width: 600px;
-  margin: 30px auto;
+  width: 400px;
+  margin: 0px auto;
 
   display: grid;
   grid-template-columns: repeat(20, minmax(0, 1fr));
-  grid-template-rows: 25px 25px 25px 25px 25px;
+  grid-template-rows: 70px 25px 25px 25px 300px 0px 50px 50px;
 
   gap: 5px;
   align-items: center;
@@ -18,13 +17,15 @@
 }
 
 .player_genre {
+  grid-row: 2;
   grid-column: 1 / -1;
-  // grid-row: 2;
+  font-size: 1.25rem;
 }
 
 .player_playlist {
   grid-column: 1 / -1;
   grid-row: 3;
+  font-size: 0.9rem;
 }
 
 .player_album_image {
@@ -38,8 +39,7 @@
 
 .player_track {
   grid-column: 1 / -1;
-
-  // font-size: 1.25em;
+  font-size: 1rem;
 }
 
 .player_rewind {
