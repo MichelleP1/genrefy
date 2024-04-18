@@ -1,46 +1,89 @@
 .player_main {
-  display: flex;
-  flex-direction: column;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-columns: repeat(20, minmax(0, 1fr));
+  grid-template-rows: 25px 25px 25px 25px 25px;
+
+  gap: 5px;
   align-items: center;
-  justify-content: stretch;
+
+  & > * {
+    // background-color: grey;
+    padding: 5px;
+    text-align: center;
+  }
 }
 
 .player_genre {
-  // flex: 2;
-  font-size: 1.75em;
+  grid-column: 1 / -1;
+  // grid-row: 2;
 }
 
 .player_playlist {
-  font-size: 1.25em;
+  grid-column: 1 / -1;
+  grid-row: 3;
 }
 
 .player_album_image {
-  // flex: 1;
-  aspect-ratio: 1 / 1;
-  // min-width: 30%;
-  // height: 70%;
-  min-width: 25%;
-  max-width: 90%;
-  // width: 90%;
+  grid-column: 1 / -1;
+  grid-row: 4 / span 3;
 
-  // position: relative;
-  // width: 20%;
+  min-width: 300px;
+  margin: auto;
+  padding: 0px;
 }
 
 .player_track {
-  font-size: 1.25em;
+  grid-column: 1 / -1;
+
+  // font-size: 1.25em;
 }
 
-.player_controls {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  min-width: 25%;
-  max-width: 90%;
+.player_rewind {
+  grid-column: 1 / span 4;
+  grid-row: 8;
 }
 
-.player_genre_playlist_controls {
+.player_previous {
+  grid-column: 5 / span 4;
+  grid-row: 8;
 }
 
-.player_like_follow_controls {
+.player_toggle_play {
+  grid-column: 9 / span 4;
+  grid-row: 8;
+  size: 100px;
+}
+
+.player_next {
+  grid-column: 13 / span 4;
+  grid-row: 8;
+}
+
+.player_fastforward {
+  grid-column: 17 / span 4;
+  grid-row: 8;
+}
+
+.player_change_genre {
+  grid-column: 1 / span 5;
+  grid-row: 9;
+}
+
+.player_change_playlist {
+  grid-column: 6 / span 5;
+  grid-row: 9;
+}
+
+.player_follow {
+  grid-column: 11 / span 5;
+  grid-row: 9;
+}
+
+.player_like {
+  grid-column: 16 / span 5;
+  grid-row: 9;
 }

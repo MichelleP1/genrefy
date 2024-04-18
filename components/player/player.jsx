@@ -10,25 +10,16 @@ import {
   FaFastBackward,
   FaStepForward,
   FaFastForward,
+  FaSync,
+  FaHeart,
 } from "react-icons/fa";
-import {
-  player_main,
-  player_genre,
-  player_playlist,
-  player_album_image,
-  player_track,
-  player_controls,
-  player_genre_playlist_controls,
-  player_like_follow_controls,
-} from "./player.module.scss";
+import styles from "./player.module.scss";
 import { SPOTIFY_SCRIPT } from "../../lib/static/constants";
 
 const track = {
   name: "",
-  album: {
-    images: [{ url: "" }],
-  },
-  artists: [{ name: "" }],
+  albumImage: "",
+  artist: "",
 };
 
 export const Player = ({ token }) => {
@@ -40,7 +31,6 @@ export const Player = ({ token }) => {
   const [playlist, setPlaylist] = useState("");
   const [playlists, setPlaylists] = useState([]);
   const deviceID = useRef("");
-  const trackName = useRef("");
   const position = useRef(0);
   const player = useRef(null);
 
@@ -75,9 +65,9 @@ export const Player = ({ token }) => {
       player.current.addListener("player_state_changed", (state) => {
         if (!state) return;
 
-        const track = state.track_window.current_track;
-        if (track.name !== trackName.current) position.current = 0;
-        trackName.current = track.name;
+        const track = PlayerService.setTrack(state.track_window.current_track);
+        if (track.name !== currentTrack.name) position.current = 0;
+
         setCurrentTrack(track);
         setPaused(state.paused);
 
@@ -96,29 +86,24 @@ export const Player = ({ token }) => {
 
   const handleChangeGenre = async (_, selectedGenre = null) => {
     const genre = selectedGenre || PlayerService.getRandomGenre();
-    const playlists = await PlayerService.getPlaylist(token, genre);
+    const playlists = await PlayerService.getGenrePlaylist(token, genre);
     const playlist = playlists[0];
+    const tracksUrl = playlist.tracks.href;
 
     setPlaylists(playlists);
     setPlaylist(playlist);
     setGenre(genre);
 
-    PlayerService.updatePlayer(token, deviceID.current, playlist.tracks.href);
+    PlayerService.updatePlayer(token, deviceID.current, tracksUrl);
   };
 
   const handleChangePlaylist = async () => {
-    const playlist = PlayerService.getCurrentGenreNextPlaylist(
-      playlists,
-      playlist
-    );
+    const newPlaylist = PlayerService.getNextPlaylist(playlists, playlist);
+    const tracksUrl = newPlaylist.tracks.href;
 
-    setPlaylist(playlist);
+    setPlaylist(newPlaylist);
 
-    PlayerService.updatePlayer(
-      token,
-      deviceID.current,
-      newPlaylist.tracks.href
-    );
+    PlayerService.updatePlayer(token, deviceID.current, tracksUrl);
   };
 
   const handlePlay = () => {
@@ -155,36 +140,46 @@ export const Player = ({ token }) => {
   return active ? (
     playlist ? (
       <>
-        <div className={player_main}>
+        <div className={styles.player_main}>
           <Browse onChangeGenre={handleChangeGenre}></Browse>
-          <h3 className={player_genre}>{genre}</h3>
-          <h5 className={player_playlist}>{playlist.name}</h5>
+          <h5 className={styles.player_genre}>{genre}</h5>
+          <h5 className={styles.player_playlist}>{playlist.name}</h5>
           <img
-            className={player_album_image}
-            src={currentTrack.album.images[0].url}
+            className={styles.player_album_image}
+            src={currentTrack.albumImage}
           />
-          <h5 className={player_track}>
-            {currentTrack.name} - {currentTrack.artists[0].name}
+          <h5 className={styles.player_track}>
+            {currentTrack.name} - {currentTrack.artist}
           </h5>
-          <div>
-            <div className={player_controls}>
-              <Button title={<FaFastBackward />} onClick={handleRewind} />
-              <Button title={<FaStepBackward />} onClick={handlePrevious} />
-              <Button
-                title={paused ? <FaPlay /> : <FaPause />}
-                onClick={handlePlay}
-              />
-              <Button title={<FaStepForward />} onClick={handleNext} />
-              <Button title={<FaFastForward />} onClick={handleFastForward} />
-            </div>
-            <div className={player_genre_playlist_controls}>
-              <Button title="Change Genre" onClick={handleChangeGenre} />
-              <Button title="Change Playlist" onClick={handleChangePlaylist} />
-            </div>
-            <div className={player_like_follow_controls}>
-              <Button title="Like" onClick={handleSaveTrack} />
-              <Button title="Follow" onClick={handleFollowPlaylist} />
-            </div>
+          <div className={styles.player_rewind}>
+            <Button title={<FaFastBackward />} onClick={handleRewind} />
+          </div>
+          <div className={styles.player_previous}>
+            <Button title={<FaStepBackward />} onClick={handlePrevious} />
+          </div>
+          <div className={styles.player_toggle_play}>
+            <Button
+              title={paused ? <FaPlay /> : <FaPause />}
+              onClick={handlePlay}
+            />
+          </div>
+          <div className={styles.player_next}>
+            <Button title={<FaStepForward />} onClick={handleNext} />
+          </div>
+          <div className={styles.player_fastforward}>
+            <Button title={<FaFastForward />} onClick={handleFastForward} />
+          </div>
+          <div className={styles.player_change_genre}>
+            <Button title="Genre" onClick={handleChangeGenre} />
+          </div>
+          <div className={styles.player_change_playlist}>
+            <Button title="Playlist" onClick={handleChangePlaylist} />
+          </div>
+          <div className={styles.player_follow}>
+            <Button title="Follow" onClick={handleFollowPlaylist} />
+          </div>
+          <div className={styles.player_like}>
+            <Button title="Like" onClick={handleSaveTrack} />
           </div>
         </div>
       </>

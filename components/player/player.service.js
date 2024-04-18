@@ -13,7 +13,7 @@ const querySpotify = async (token, url) => {
   });
 };
 
-const updateSpotify = async (token, url, uris = {}) => {
+const updateSpotify = async (token, url, uris = null) => {
   await axios.put(
     url,
     { uris },
@@ -27,8 +27,22 @@ const updateSpotify = async (token, url, uris = {}) => {
   );
 };
 
+const updateSpotify2 = async (token, url) => {
+  await axios.put(
+    url,
+    {},
+    {
+      headers: {
+        Authorization: "Bearer " + token,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    }
+  );
+};
+
 export const PlayerService = {
-  getPlaylist: async (token, genre) => {
+  getGenrePlaylist: async (token, genre) => {
     const genrePlaylists = await querySpotify(
       token,
       `${URL_PREFIX}search?q=sound of ${genre}&type=playlist&limit=10`
@@ -53,7 +67,7 @@ export const PlayerService = {
   },
 
   saveTrack: async (token, trackID) => {
-    updateSpotify(token, `${URL_PREFIX}me/tracks?ids=${trackID}`);
+    updateSpotify2(token, `${URL_PREFIX}me/tracks?ids=${trackID}`);
   },
 
   followPlaylist: async (token, playListID) => {
@@ -64,8 +78,16 @@ export const PlayerService = {
     return genres[Math.floor(Math.random() * genres.length)];
   },
 
-  getCurrentGenreNextPlaylist: (playlists, playlist) => {
+  getNextPlaylist: (playlists, playlist) => {
     const index = playlists.findIndex((x) => x.name === playlist.name) + 1 || 0;
     return playlists?.[index];
+  },
+
+  setTrack: ({ name, album, artists }) => {
+    return {
+      name: name,
+      albumImage: album.images[0].url,
+      artist: artists[0].name,
+    };
   },
 };
