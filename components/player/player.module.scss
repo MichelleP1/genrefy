@@ -1,7 +1,6 @@
 .player_main {
-  min-width: 300px;
-  max-width: 400px;
-  margin: 30px auto;
+  width: 400px;
+  margin: 0px auto;
 
   display: grid;
   grid-template-columns: repeat(20, minmax(0, 1fr));
