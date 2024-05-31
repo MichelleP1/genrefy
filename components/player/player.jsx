@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import styles from "./player.module.scss";
 import { SPOTIFY_SCRIPT } from "../../lib/static/constants";
+import { FastAverageColor } from "fast-average-color";
 
 const track = {
   name: "",
@@ -74,6 +75,18 @@ export const Player = ({ token }) => {
         player.current.getCurrentState().then((state) => {
           !state ? setActive(false) : setActive(true);
         });
+
+        const fac = new FastAverageColor();
+
+        fac
+          .getColorAsync(track.albumImage)
+          .then((color) => {
+            const container = document.querySelector(".container");
+            container.style.backgroundImage = `linear-gradient(${color.rgba}, #000)`;
+          })
+          .catch((e) => {
+            console.log(e);
+          });
       });
 
       const connection = await player.current.connect();

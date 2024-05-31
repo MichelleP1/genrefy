@@ -1,5 +1,5 @@
 .player_main {
-  width: 400px;
+  width: 350px;
   margin: 0px auto;
 
   display: grid;
@@ -20,12 +20,14 @@
   grid-row: 2;
   grid-column: 1 / -1;
   font-size: 1.25rem;
+  color: #fff;
 }
 
 .player_playlist {
   grid-column: 1 / -1;
   grid-row: 3;
   font-size: 0.9rem;
+  color: #fff;
 }
 
 .player_album_image {
@@ -40,6 +42,7 @@
 .player_track {
   grid-column: 1 / -1;
   font-size: 1rem;
+  color: #fff;
 }
 
 .player_rewind {

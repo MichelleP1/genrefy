@@ -12,6 +12,7 @@
     "axios": "^1.6.8",
     "cookie": "^0.6.0",
     "date-fns": "^2.29.3",
+    "fast-average-color": "^9.4.0",
     "gray-matter": "^4.0.3",
     "mui": "^0.0.1",
     "next": "latest",

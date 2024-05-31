@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styles from "./browse.module.scss";
 import { genres } from "../../lib/static/genres";
 import Autocomplete from "@mui/material/Autocomplete";
 import { TextField } from "@mui/material";
@@ -21,11 +20,12 @@ export const Browse = ({ onChangeGenre }) => {
       }}
       disableClearable
       options={genres}
-      sx={{ width: 400 }}
+      sx={{ width: 350 }}
       renderInput={(params) => <TextField {...params} label="Genres" />}
       inputProps={{
         style: {
           padding: 5,
+          color: "#fff",
         },
       }}
     />
