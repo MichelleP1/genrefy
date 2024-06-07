@@ -6,7 +6,7 @@ export default (_, res: NextApiResponse) => {
     response_type: "code",
     client_id: process.env.SPOTIFY_CLIENT_ID,
     scope:
-      "streaming user-read-email user-read-private user-follow-modify user-library-modify",
+      "streaming user-read-email user-read-private user-follow-modify user-library-modify playlist-modify-public playlist-modify-private",
     redirect_uri: `${process.env.APP_URL}/api/auth/callback`,
     state: generateRandomString(16),
   });

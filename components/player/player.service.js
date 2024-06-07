@@ -1,6 +1,7 @@
 import axios from "axios";
 import { genres } from "../../lib/static/genres";
 import { URL_PREFIX } from "../../lib/static/constants";
+import { FastAverageColor } from "fast-average-color";
 
 const querySpotify = async (token, url) => {
   return await axios.get(url, {
@@ -17,20 +18,6 @@ const updateSpotify = async (token, url, uris = null) => {
   await axios.put(
     url,
     { uris },
-    {
-      headers: {
-        Authorization: "Bearer " + token,
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    }
-  );
-};
-
-const updateSpotify2 = async (token, url) => {
-  await axios.put(
-    url,
-    {},
     {
       headers: {
         Authorization: "Bearer " + token,
@@ -67,7 +54,7 @@ export const PlayerService = {
   },
 
   saveTrack: async (token, trackID) => {
-    updateSpotify2(token, `${URL_PREFIX}me/tracks?ids=${trackID}`);
+    updateSpotify(token, `${URL_PREFIX}me/tracks?ids=${trackID}`);
   },
 
   followPlaylist: async (token, playListID) => {
@@ -83,11 +70,26 @@ export const PlayerService = {
     return playlists?.[index];
   },
 
-  setTrack: ({ name, album, artists }) => {
+  setTrack: (track) => {
     return {
-      name: name,
-      albumImage: album.images[0].url,
-      artist: artists[0].name,
+      id: track.id,
+      name: track.name,
+      albumImage: track.album.images[0].url,
+      artist: track.artists[0].name,
     };
+  },
+
+  setAverageBackgroundColor: (albumImage) => {
+    const fac = new FastAverageColor();
+
+    fac
+      .getColorAsync(albumImage)
+      .then((color) => {
+        const container = document.querySelector(".container");
+        container.style.backgroundImage = `linear-gradient(${color.rgba}, #000)`;
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   },
 };

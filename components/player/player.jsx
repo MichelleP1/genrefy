@@ -3,6 +3,9 @@ import { Inactive } from "../connectivity/inactive/inactive";
 import { Button } from "../ui/button/button";
 import { Browse } from "../browse/browse";
 import { PlayerService } from "./player.service";
+import styles from "./player.module.scss";
+import { SPOTIFY_SCRIPT } from "../../lib/static/constants";
+import { trackModel } from "./track-model";
 import {
   FaPlay,
   FaPause,
@@ -10,28 +13,17 @@ import {
   FaFastBackward,
   FaStepForward,
   FaFastForward,
-  FaSync,
-  FaHeart,
 } from "react-icons/fa";
-import styles from "./player.module.scss";
-import { SPOTIFY_SCRIPT } from "../../lib/static/constants";
-import { FastAverageColor } from "fast-average-color";
 
-const track = {
-  name: "",
-  albumImage: "",
-  artist: "",
-};
-
-export const Player = ({ token }) => {
-  const [playerToken, setPlayerToken] = useState(token);
+export const Player = ({ token, setToken }) => {
   const [paused, setPaused] = useState(false);
   const [active, setActive] = useState(true);
-  const [currentTrack, setCurrentTrack] = useState(track);
+  const [currentTrack, setCurrentTrack] = useState(trackModel);
   const [genre, setGenre] = useState("");
   const [playlist, setPlaylist] = useState("");
   const [playlists, setPlaylists] = useState([]);
   const deviceID = useRef("");
+  const trackName = useRef("");
   const position = useRef(0);
   const player = useRef(null);
 
@@ -44,57 +36,71 @@ export const Player = ({ token }) => {
   }, []);
 
   const setSpotifyPlayer = () => {
+    setScripts();
+
+    window.onSpotifyWebPlaybackSDKReady = async () => {
+      initiatePlayer();
+
+      player.current.addListener("ready", ({ device_id }) => {
+        onReady(device_id);
+      });
+
+      player.current.addListener("player_state_changed", (state) => {
+        onPlayerStateChanged(state);
+      });
+
+      connectPlayer();
+    };
+  };
+
+  const setScripts = () => {
     const script = document.createElement("script");
     script.src = SPOTIFY_SCRIPT;
     script.async = true;
     document.body.appendChild(script);
+  };
 
-    window.onSpotifyWebPlaybackSDKReady = async () => {
-      player.current = new window.Spotify.Player({
-        name: "Web Playback SDK",
-        getOAuthToken: (cb) => {
-          cb(playerToken);
-        },
-        volume: 0.5,
-      });
+  const initiatePlayer = () => {
+    player.current = new window.Spotify.Player({
+      name: "Web Playback SDK",
+      getOAuthToken: (cb) => {
+        cb(token);
+      },
+      volume: 0.5,
+    });
+  };
 
-      player.current.addListener("ready", ({ device_id }) => {
-        deviceID.current = device_id;
-        handleChangeGenre();
-      });
+  const onReady = (device_id) => {
+    deviceID.current = device_id;
+    handleChangeGenre();
+  };
 
-      player.current.addListener("player_state_changed", (state) => {
-        if (!state) return;
+  const onPlayerStateChanged = (state) => {
+    if (!state) return;
 
-        const track = PlayerService.setTrack(state.track_window.current_track);
-        if (track.name !== currentTrack.name) position.current = 0;
+    if (state.track_window.current_track.name !== trackName.current) {
+      const track = PlayerService.setTrack(state.track_window.current_track);
+      trackName.current = track.name;
+      setCurrentTrack(track);
 
-        setCurrentTrack(track);
-        setPaused(state.paused);
+      position.current = 0;
+      PlayerService.setAverageBackgroundColor(track.albumImage);
+    }
 
-        player.current.getCurrentState().then((state) => {
-          !state ? setActive(false) : setActive(true);
-        });
+    setPaused(state.paused);
 
-        const fac = new FastAverageColor();
+    player.current.getCurrentState().then((state) => {
+      !state ? setActive(false) : setActive(true);
+    });
+  };
 
-        fac
-          .getColorAsync(track.albumImage)
-          .then((color) => {
-            const container = document.querySelector(".container");
-            container.style.backgroundImage = `linear-gradient(${color.rgba}, #000)`;
-          })
-          .catch((e) => {
-            console.log(e);
-          });
-      });
+  const connectPlayer = async () => {
+    const connection = await player.current.connect();
 
-      const connection = await player.current.connect();
-      if (!connection) {
-        setPlayerToken("");
-        alert("Your session has expired - please sign in again");
-      }
-    };
+    if (!connection) {
+      setToken("");
+      alert("Your session has expired - please sign in again");
+    }
   };
 
   const handleChangeGenre = async (_, selectedGenre = null) => {
