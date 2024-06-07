@@ -76,14 +76,7 @@ export const Player = ({ token, setToken }) => {
   };
 
   const onPlayerStateChanged = (state) => {
-    if (!state) {
-      setActive(false);
-      return;
-    }
-
-    if (!active) {
-      setActive(true);
-    }
+    if (!state) return;
 
     if (
       state.track_window.current_track.name !==
@@ -165,7 +158,7 @@ export const Player = ({ token, setToken }) => {
     PlayerService.followPlaylist(token, playlist.id);
   };
 
-  return active ? (
+  return playerState.current ? (
     playlist ? (
       <>
         <div className={styles.player_main}>
