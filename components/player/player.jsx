@@ -23,9 +23,9 @@ export const Player = ({ token, setToken }) => {
   const [playlist, setPlaylist] = useState("");
   const [playlists, setPlaylists] = useState([]);
   const deviceID = useRef("");
-  const trackName = useRef("");
   const position = useRef(0);
   const player = useRef(null);
+  const playerState = useRef(null);
 
   useEffect(() => {
     setSpotifyPlayer();
@@ -76,22 +76,31 @@ export const Player = ({ token, setToken }) => {
   };
 
   const onPlayerStateChanged = (state) => {
-    if (!state) return;
+    if (!state) {
+      setActive(false);
+      return;
+    }
 
-    if (state.track_window.current_track.name !== trackName.current) {
+    if (!active) {
+      setActive(true);
+    }
+
+    if (
+      state.track_window.current_track.name !==
+      playerState.current?.track_window?.current_track?.name
+    ) {
       const track = PlayerService.setTrack(state.track_window.current_track);
-      trackName.current = track.name;
       setCurrentTrack(track);
 
       position.current = 0;
       PlayerService.setAverageBackgroundColor(track.albumImage);
     }
 
-    setPaused(state.paused);
+    if (state.paused !== playerState.current?.state?.paused) {
+      setPaused(state.paused);
+    }
 
-    player.current.getCurrentState().then((state) => {
-      !state ? setActive(false) : setActive(true);
-    });
+    playerState.current = state;
   };
 
   const connectPlayer = async () => {
