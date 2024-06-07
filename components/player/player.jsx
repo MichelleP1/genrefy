@@ -17,7 +17,6 @@ import {
 
 export const Player = ({ token, setToken }) => {
   const [paused, setPaused] = useState(false);
-  const [active, setActive] = useState(true);
   const [currentTrack, setCurrentTrack] = useState(trackModel);
   const [genre, setGenre] = useState("");
   const [playlist, setPlaylist] = useState("");
@@ -28,17 +27,17 @@ export const Player = ({ token, setToken }) => {
   const playerState = useRef(null);
 
   useEffect(() => {
-    setSpotifyPlayer();
+    setPlayer();
 
     return () => {
-      player.current.disconnect();
+      removePlayer();
     };
   }, []);
 
-  const setSpotifyPlayer = () => {
+  const setPlayer = () => {
     setScripts();
 
-    window.onSpotifyWebPlaybackSDKReady = async () => {
+    window.onSpotifyWebPlaybackSDKReady = () => {
       initiatePlayer();
 
       player.current.addListener("ready", ({ device_id }) => {
@@ -103,6 +102,10 @@ export const Player = ({ token, setToken }) => {
       setToken("");
       alert("Your session has expired - please sign in again");
     }
+  };
+
+  const removePlayer = () => {
+    player.current.disconnect();
   };
 
   const handleChangeGenre = async (_, selectedGenre = null) => {
