@@ -7,7 +7,7 @@ import styles from "./browse.module.scss";
 import { Button } from "../ui/button/button";
 import { btn_menu } from "../ui/button/button.module.scss";
 
-export const Browse = ({ onChangeGenre }) => {
+export const Browse = ({ setToken, onChangeGenre }) => {
   const [value, setValue] = useState(genres[0]);
 
   const setGenreValue = (_, newValue) => {
@@ -16,7 +16,7 @@ export const Browse = ({ onChangeGenre }) => {
   };
 
   const logout = () => {
-    console.log("logout");
+    setToken("");
   };
 
   return (

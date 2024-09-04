@@ -1,13 +1,14 @@
 import React from "react";
-import Link from "next/link";
+import { Button } from "@mui/material";
+import styles from "./login.module.scss";
 
 export const Login = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Link href="/api/auth/login" className="btn-spotify">
+        <Button href="/api/auth/login" className={styles.button}>
           Login with Spotify
-        </Link>
+        </Button>
       </header>
     </div>
   );

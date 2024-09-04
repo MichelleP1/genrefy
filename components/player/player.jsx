@@ -161,11 +161,19 @@ export const Player = ({ token, setToken }) => {
     PlayerService.followPlaylist(token, playlist.id);
   };
 
+  useEffect(() => {
+    console.log("token");
+    console.log(token);
+  }, [token]);
+
   return playerState.current ? (
     playlist ? (
       <>
         <div className={styles.player_main}>
-          <Browse onChangeGenre={handleChangeGenre}></Browse>
+          <Browse
+            setToken={setToken}
+            onChangeGenre={handleChangeGenre}
+          ></Browse>
 
           <h5 className={styles.player_genre}>{genre}</h5>
           <h5 className={styles.player_playlist}>{playlist.name}</h5>
