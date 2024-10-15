@@ -1,4 +1,33 @@
-.button {
-  color: red;
-  background-color: yellow;
+.container {
+  background-color: black;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.loginButton {
+  color: #ffffff;
+  background-color: #1ed760;
+}
+
+.centered {
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.policy {
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.list {
+  margin-left: 20px;
 }

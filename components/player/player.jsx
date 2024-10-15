@@ -14,6 +14,9 @@ import {
   FaStepForward,
   FaFastForward,
 } from "react-icons/fa";
+import Link from "next/link";
+import logo from "./logo-small.svg";
+import Image from "next/image";
 
 export const Player = ({ token, setToken }) => {
   const [paused, setPaused] = useState(false);
@@ -161,11 +164,6 @@ export const Player = ({ token, setToken }) => {
     PlayerService.followPlaylist(token, playlist.id);
   };
 
-  useEffect(() => {
-    console.log("token");
-    console.log(token);
-  }, [token]);
-
   return playerState.current ? (
     playlist ? (
       <>
@@ -176,7 +174,17 @@ export const Player = ({ token, setToken }) => {
           ></Browse>
 
           <h5 className={styles.player_genre}>{genre}</h5>
-          <h5 className={styles.player_playlist}>{playlist.name}</h5>
+          <Image
+            className={`${styles.player_genre} ${styles.player_logo}`}
+            src={logo}
+            alt="Spotify logo"
+          />
+          <Link
+            className={styles.player_playlist}
+            href={playlist.external_urls.spotify}
+          >
+            {playlist.name}
+          </Link>
           <img
             className={styles.player_album_image}
             src={currentTrack.albumImage}
