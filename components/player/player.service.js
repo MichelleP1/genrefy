@@ -28,6 +28,17 @@ const updateSpotify = async (token, url, uris = null) => {
   );
 };
 
+const deleteFromSpotify = async (token, url, uris = null) => {
+  await axios.delete(url, {
+    headers: {
+      Authorization: "Bearer " + token,
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    data: { uris },
+  });
+};
+
 export const PlayerService = {
   getGenrePlaylist: async (token, genre) => {
     const genrePlaylists = await querySpotify(
@@ -53,7 +64,15 @@ export const PlayerService = {
     );
   },
 
-  saveTrack: async (token, trackID) => {
+  likeTrack: async (token, trackID) => {
+    updateSpotify(token, `${URL_PREFIX}me/tracks?ids=${trackID}`);
+  },
+
+  unlikeTrack: async (token, trackID) => {
+    deleteFromSpotify(token, `${URL_PREFIX}me/tracks?ids=${trackID}`);
+  },
+
+  removeTrack: async (token, trackID) => {
     updateSpotify(token, `${URL_PREFIX}me/tracks?ids=${trackID}`);
   },
 
@@ -91,5 +110,12 @@ export const PlayerService = {
       .catch((e) => {
         console.log(e);
       });
+  },
+
+  hasTrackChanged: (newState, currentState) => {
+    return (
+      newState.track_window.current_track.name !==
+      currentState.current?.track_window?.current_track?.name
+    );
   },
 };

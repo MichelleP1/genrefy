@@ -24,6 +24,7 @@ export const Player = ({ token, setToken }) => {
   const [genre, setGenre] = useState("");
   const [playlist, setPlaylist] = useState("");
   const [playlists, setPlaylists] = useState([]);
+  const [liked, setLiked] = useState(false);
   const deviceID = useRef("");
   const position = useRef(0);
   const player = useRef(null);
@@ -80,18 +81,16 @@ export const Player = ({ token, setToken }) => {
   const onPlayerStateChanged = (state) => {
     if (!state) return;
 
-    if (
-      state.track_window.current_track.name !==
-      playerState.current?.track_window?.current_track?.name
-    ) {
+    if (PlayerService.hasTrackChanged(state, playerState)) {
       const track = PlayerService.setTrack(state.track_window.current_track);
       setCurrentTrack(track);
 
       position.current = 0;
       PlayerService.setAverageBackgroundColor(track.albumImage);
+      setLiked(false);
     }
 
-    if (state.paused !== playerState.current?.state?.paused) {
+    if (state.paused) {
       setPaused(state.paused);
     }
 
@@ -156,8 +155,14 @@ export const Player = ({ token, setToken }) => {
     player.current.seek(position.current);
   };
 
-  const handleSaveTrack = () => {
-    PlayerService.saveTrack(token, currentTrack.id);
+  const handleLikeTrack = () => {
+    PlayerService.likeTrack(token, currentTrack.id);
+    setLiked(true);
+  };
+
+  const handleUnlikeTrack = () => {
+    PlayerService.unlikeTrack(token, currentTrack.id);
+    setLiked(false);
   };
 
   const handleFollowPlaylist = () => {
@@ -172,7 +177,6 @@ export const Player = ({ token, setToken }) => {
             setToken={setToken}
             onChangeGenre={handleChangeGenre}
           ></Browse>
-
           <h5 className={styles.player_genre}>{genre}</h5>
           <Image
             className={`${styles.player_genre} ${styles.player_logo}`}
@@ -220,7 +224,14 @@ export const Player = ({ token, setToken }) => {
             <Button title="Follow" onClick={handleFollowPlaylist} />
           </div>
           <div className={styles.player_like}>
-            <Button title="Like" onClick={handleSaveTrack} />
+            <Button title="Like" onClick={handleUnlikeTrack} />
+          </div>
+          <div className={styles.player_like}>
+            {liked ? (
+              <Button title="Liked" onClick={handleUnlikeTrack} />
+            ) : (
+              <Button title="Like" onClick={handleLikeTrack} />
+            )}
           </div>
         </div>
       </>
