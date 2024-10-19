@@ -90,7 +90,7 @@ export const Player = ({ token, setToken }) => {
       setLiked(false);
     }
 
-    if (state.paused) {
+    if (state.paused !== playerState.current?.state?.paused) {
       setPaused(state.paused);
     }
 
